@@ -1,15 +1,18 @@
 package com.example.swe.mvp;
 
 import android.app.Application;
+import android.content.Context;
 
 import com.example.swe.mvp.data.DataManager;
 import com.example.swe.mvp.di.AppContext;
+import com.example.swe.mvp.di.component.ApplicationComponent;
+import com.example.swe.mvp.di.module.ApplicationModule;
 
 import javax.inject.Inject;
 
 public class MvpApp extends Application {
 
-    private AppContext appContext;
+    private ApplicationComponent applicationComponent;
 
     @Inject
     DataManager mDataManager;
@@ -17,5 +20,14 @@ public class MvpApp extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        applicationComponent = DaggerApplicationComponent.builder()
+                .applicationModule(new ApplicationModule(this)).build();
+
+        applicationComponent.inject(this);
+    }
+
+   public ApplicationComponent getApplicationComponent(){
+        return applicationComponent;
     }
 }

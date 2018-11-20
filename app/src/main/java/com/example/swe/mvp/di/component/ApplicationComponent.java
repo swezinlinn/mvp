@@ -6,6 +6,7 @@ import android.content.Context;
 import com.example.swe.mvp.MvpApp;
 import com.example.swe.mvp.data.DataManager;
 import com.example.swe.mvp.di.AppContext;
+import com.example.swe.mvp.di.module.ActivityModule;
 import com.example.swe.mvp.di.module.ApplicationModule;
 
 import javax.inject.Singleton;
@@ -13,7 +14,7 @@ import javax.inject.Singleton;
 import dagger.Component;
 
 @Singleton
-@Component(modules = ApplicationModule.class)
+@Component(modules = {ApplicationModule.class})
 public interface ApplicationComponent {
 
     void inject(MvpApp mvpApp);
