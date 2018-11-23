@@ -10,7 +10,7 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 @Singleton
-public class AppPreferencesHelper {
+public class AppPreferencesHelper implements PreferencesHelper{
     private static final String PREF_USER = "pref_user";
     private final SharedPreferences mPrefs;
 
