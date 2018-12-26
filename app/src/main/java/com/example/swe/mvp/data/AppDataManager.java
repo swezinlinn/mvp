@@ -12,6 +12,8 @@ public class AppDataManager implements DataManager{
 
     @Inject
     public AppDataManager(PreferencesHelper preferencesHelper){
+
+
         this.preferencesHelper = preferencesHelper;
     }
 }
