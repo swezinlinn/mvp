@@ -1,6 +1,9 @@
 package com.example.swe.mvp.data;
 
+import android.content.Context;
+
 import com.example.swe.mvp.data.prefs.PreferencesHelper;
+import com.example.swe.mvp.di.AppContext;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -11,7 +14,8 @@ public class AppDataManager implements DataManager{
     private PreferencesHelper preferencesHelper;
 
     @Inject
-    public AppDataManager(PreferencesHelper preferencesHelper){
+    public AppDataManager(@AppContext Context context,
+                          PreferencesHelper preferencesHelper){
         this.preferencesHelper = preferencesHelper;
     }
 }
