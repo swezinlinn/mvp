@@ -4,6 +4,10 @@ import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.swe.mvp.di.ActivityContext;
+import com.example.swe.mvp.di.PerActivity;
+import com.example.swe.mvp.ui.welcome.WelcomePresenter;
+import com.example.swe.mvp.ui.welcome.WelcomePresenterInterface;
+import com.example.swe.mvp.ui.welcome.WelcomeView;
 
 import dagger.Module;
 import dagger.Provides;
@@ -26,5 +30,11 @@ public class ActivityModule {
     @Provides
     AppCompatActivity provideActivity(){
         return mActivity;
+    }
+
+    @Provides
+    @PerActivity
+    WelcomePresenterInterface<WelcomeView> providesWelcomePresenter(WelcomePresenter<WelcomeView> presenter){
+        return presenter;
     }
 }
