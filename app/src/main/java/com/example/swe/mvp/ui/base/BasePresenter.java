@@ -1,4 +1,4 @@
-package com.example.swe.mvp.ui;
+package com.example.swe.mvp.ui.base;
 
 import com.example.swe.mvp.data.DataManager;
 

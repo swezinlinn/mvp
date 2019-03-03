@@ -10,12 +10,12 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 @Singleton
-public class AppPreferencesHelper implements PreferencesHelper{
+public class AppPreference implements PreferencesHelper{
     private static final String PREF_USER = "pref_user";
     private final SharedPreferences mPrefs;
 
     @Inject
-    public AppPreferencesHelper(@AppContext Context context,
+    public AppPreference(@AppContext Context context,
                                 @PreferenceInfo String prefFileName){
         mPrefs = context.getSharedPreferences(prefFileName, Context.MODE_PRIVATE);
     }

@@ -1,4 +1,4 @@
-package com.example.swe.mvp.ui;
+package com.example.swe.mvp.ui.base;
 
 public interface PresenterInterface {
 }

@@ -1,7 +1,7 @@
 package com.example.swe.mvp.di.module;
 
 import android.content.Context;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.swe.mvp.di.ActivityContext;
 
